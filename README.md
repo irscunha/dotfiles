@@ -1,2 +1,5 @@
-# dotfiles
-[2018] Dotfiles from my majaro + i3 configuration.
+## Dotfiles for i3-gaps configuration using Manjaro Linux
+
+Still in early fase. Planning on putting list of applications used.
+
+
