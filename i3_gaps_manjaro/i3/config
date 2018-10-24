@@ -203,7 +203,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id firefox
 exec --no-startup-id telegram-desktop
 exec --no-startup-id spotify
-exec --no-startup-id atom
+exec --no-startup-id code
 exec --no-startup-id volumeicon
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -261,7 +261,7 @@ for_window [urgent=latest] focus
 assign [class="Firefox"] $ws1
 assign [class="Telegram"] $ws2
 for_window [class="Spotify"] move to workspace $ws3
-for_window [class="Atom"] move to workspace $ws4
+for_window [title="(?i)Code"] move to workspace $ws4
 
 # ----- SYSTEM ----- #
 
@@ -313,8 +313,6 @@ bar {
         bindsym button4 nop
         bindsym button5 nop
         strip_workspace_numbers yes
-
-        
 }
 
 # hide/unhide i3status bar
