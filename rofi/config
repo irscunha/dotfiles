@@ -1,0 +1,15 @@
+rofi.color-enabled: true
+rofi.color-window: #1C2124, #EF798A, #EF798A
+rofi.color-normal: #1C2124, #E5C3D1, #1C2124, #1C2124, #EF798A
+rofi.color-active: #1C2124, #E5C3D1, #1C2124, #1C2124, #EF798A
+rofi.color-urgent: #1C2124, #E5C3D1, #1C2124, #1C2124, #EF798A
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 5
+rofi.font: Source Code Pro Semibold 10.5
+rofi.bw: 1
+rofi.columns: 2
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
