@@ -1,0 +1,247 @@
+[colors]
+bar_background = #1e1e20
+bar_foreground = #a19598
+bar_bordercolor = #ef798a
+ws_focused_bg = #613f75
+ws_focused_fg = #f7a9a8
+ws_unfocused_bg = #e5c3d1
+ws_unfocused_fg = #613f75
+ws_urgent_bg = #48233c
+date_foreground = #e5c3d1
+date_background = #ef798a
+date2_fg = #40A4D8
+backlight_fg = #33BEB8
+battery_fg = #B2C225
+cpu_fg = #FECC2F
+memory_fg = #F9A228
+filesystem_fg = #F6621F
+pulseaudio_fg = #DB3838
+spotify_fg = #EE657A
+powermenu_fg = #A363D9
+powermenu_sep = #a19598
+
+[bar/top]
+width = 100%
+height = 27
+radius = 0
+fixed-center = true
+monitor = eDP1
+
+background = ${colors.bar_background}
+foreground = ${colors.bar_foreground}
+
+border-bottom-size = 2
+border-bottom-color = ${colors.bar_bordercolor}
+
+padding-left = 0
+padding-right = 2
+underline-size = 1
+overline-size = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Source Code Pro Semibold:size=10;1"
+font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 5 Brands:size=10;1"
+
+modules-left = i3   
+modules-center = date2 backlight battery cpu memory filesystem pulseaudio spotify powermenu
+modules-right = 
+
+tray-position = right
+
+[bar/top2]
+inherit = bar/top
+monitor = DP1
+
+modules-left = i3
+modules-center = date
+modules-right = 
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+pin-workspaces = true
+
+monitor-fallback = eDP1
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-default = a
+
+label-mode-padding = 2
+label-mode-background = ${colors.bar_foreground}
+label-mode-foreground = ${colors.bar_background}
+
+label-focused = %icon% 
+label-focused-background = ${colors.ws_focused_bg}
+label-focused-foreground = ${colors.ws_focused_fg}
+label-focused-padding = 2
+
+label-unfocused = %icon% 
+label-unfocused-background = ${colors.ws_unfocused_bg}
+label-unfocused-foreground = ${colors.ws_unfocused_fg}
+label-unfocused-padding = 2
+
+label-visible = %icon% 
+label-visible-background = ${colors.ws_unfocused_bg}
+label-visible-foreground = ${colors.ws_unfocused_fg}
+label-visible-padding = 2
+
+label-urgent = %icon% 
+label-urgent-background = ${colors.ws_urgent_bg}
+label-urgent-padding = 2
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-foreground = ${colors.date_foreground}
+format-background = ${colors.date_background}
+format-padding = 2
+
+label = %date% %time%
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.powermenu_fg}
+label-close =  cancel
+label-close-foreground = ${colors.powermenu_fg}
+label-separator = |
+label-separator-foreground = ${colors.powermenu_sep}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-2 = log off
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = reboot
+menu-1-0-exec = reboot
+
+menu-2-0 = power off
+menu-2-0-exec = poweroff
+
+menu-3-0 = log off
+menu-3-0-exec = pkill -KILL -u $USER
+
+[module/backlight]
+type = internal/xbacklight
+output = eDP1
+
+format =  <label>
+format-foreground = ${colors.backlight_fg}
+label = %percentage%%
+
+[module/battery]
+type = internal/battery
+full-at = 100
+battery = BAT1
+adapter = ACAD
+poll-interval = 5
+
+format-full =  <label-full> 
+format-charging =  <label-charging> 
+format-discharging =  <label-discharging> 
+
+format-full-foreground = ${colors.battery_fg}
+format-charging-foreground = ${colors.battery_fg}
+format-discharging-foreground = ${colors.battery_fg}
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+
+format = <label> 
+format-foreground = ${colors.cpu_fg}
+label =  %percentage:2%%
+
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label>
+format-foreground = ${colors.memory_fg}
+
+label =  %gb_used%
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+
+interval = 10
+
+fixed-values = true
+
+spacing = 4
+
+format-mounted =  <label-mounted>
+format-mounted-foreground = ${colors.filesystem_fg}
+label-mounted = %free%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = ${colors.pulseaudio_fg}
+format-muted = <ramp-volume>
+format-muted-foreground = ${colors.pulseaudio_fg}
+
+label-volume = %percentage%%
+label-muted = 
+label-muted-foreground = #666
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/spotify]
+type = custom/script
+interval = 1
+format = <label>
+format-foreground = ${colors.spotify_fg}
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{play_pause} {artist}: {song}' -p ','
+
+[module/date2]
+type = internal/date
+interval = 1.0
+
+date = 
+time = %H:%M:%S
+
+format =  <label>
+format-foreground = ${colors.date2_fg}
+label = %date% %time%
+
+date-alt = %Y-%m-%d%
+time-alt = %H:%M:%S
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
