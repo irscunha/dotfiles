@@ -1,7 +1,5 @@
 # I3-Gaps Dotfiles
 
-Hey, this is my first finished ricing and it's Madoka themed!
-
 * **Inspiration**: [This color scheme ](https://coolors.co/ef7a8b-f7a9a8-613f75-e5c3d1-a09598)
 * **Wallpaper**: [Mahou Shoujo Madoka Magica](https://www.zerochan.net/1757287) by [Ashelia](https://www.zerochan.net/user/Ashelia)
 * **GTK3**: [Sweet Mars](https://www.gnome-look.org/p/1253385/) 
@@ -17,7 +15,21 @@ Hey, this is my first finished ricing and it's Madoka themed!
 ## Screenshots
 
 Clean screenshot:
-![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/2019-03-02-220344_2806x900_scrot.png)
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/clean.png)
 
 Dirty screenshot:
-![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/2019-03-02-225154_2806x900_scrot.png)
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/dirty.png)
+
+## Rofi Custom Modes
+
+Basic menu:
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/drun.png)
+
+Switch workspace:
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/workspace.png)
+
+Take screenshot:
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/screenshot.png)
+
+Powermenu:
+![alt text](https://raw.githubusercontent.com/y-yxy/dotfiles/master/screenshots/powermenu.png)
