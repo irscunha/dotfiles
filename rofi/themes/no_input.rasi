@@ -1,0 +1,33 @@
+* {
+    background: #1C2124;
+    foreground: #E5C3D1;
+    background-alt: #1C2124;
+    highlight-background: #1C2124;
+    highlight-foreground: #EF798A;
+    border: #EF798A;
+    separator: #EF798A;
+
+    background-color: @background;
+    text-color: @foreground;
+}
+window {
+    padding: 15;
+}
+element {
+    border: 0;
+    padding: 10px;
+    margin: 4px 0px;
+    border: 0px 0px 0px 8px;
+}
+element normal.normal {
+    background-color: @background-alt;
+    text-color: @foreground-alt;
+}
+element selected.normal {
+    background-color: @highlight-background;
+    text-color: @highlight-foreground;
+    border-color: @border;
+}
+inputbar {
+    children: [];
+}

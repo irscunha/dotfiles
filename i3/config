@@ -1,12 +1,11 @@
-# My personal configuration
-
 # Set mod key: Mod1 (Alt) or Mod4 (Super)
 set $mod Mod4
 
 # Set default terminal
 set $terminal terminator
 
-font xft:URWGothic-Book 11
+# font xft:URWGothic-Book 11
+font mono:UbuntuMono 11
 
 # ---- BORDERS AND WINDOWS ---- #
 
@@ -67,7 +66,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # Focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -109,29 +108,22 @@ for_window [class="Xfburn"] floating enable
 
 # increase volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +5%; notify-send 'Volume up'"
-
 # decrease volume
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -5%; notify-send 'Volume down'"
-
 # mute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
 # play/pause
 bindsym XF86AudioPlay exec playerctl play-pause
-
 # stop
 bindsym XF86AudioStop exec playerctl stop
-
 # next
 bindsym XF86AudioNext exec playerctl next
-
 # previous
 bindsym XF86AudioPrev exec playerctl previous
 
 # screen brightness controls
 # increase brightness
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'Brightness up'"
-
 # decrease brightness
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'Brightness down'"
 
@@ -144,8 +136,11 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 # Start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/scripts/drun.sh
+bindsym $mod+A exec --no-startup-id $HOME/.config/rofi/scripts/workspace.sh
+bindsym $mod+0 exec --no-startup-id $HOME/.config/rofi/scripts/powermenu.sh
+bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/screenshot.sh
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
@@ -154,7 +149,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id volumeicon
-exec --no-startup-id xautolock -time 10 -locker blurlock
+# exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id firefox
 exec --no-startup-id telegram-desktop
 exec --no-startup-id spotify
@@ -162,9 +157,6 @@ exec --no-startup-id code
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /$HOME/.config/polybar/polybar_launch.sh
-
-# set power-manager and volume control
-exec --no-startup-id mate-power-manager
 
 # Fast start applications
 bindsym $mod+F2 exec pcmanfm
@@ -174,14 +166,9 @@ bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym Print exec --no-startup-id i3-scrot -w 
-bindsym $mod+Print --release exec --no-startup-id i3-scrot
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+m exec --no-startup-id pavucontrol
 bindsym $mod+Ctrl+h exec dunst
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 # ---- WORKSPACES ---- #
 
@@ -243,10 +230,6 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# rofi custom scripts
-bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/workspace.sh
-bindsym $mod+0 exec --no-startup-id $HOME/.config/rofi/scripts/powermenu.sh
 
 # set up displays
 exec --no-startup-id xrandr --output HDMI2 --off --output HDMI1 --off --output DP1 --primary --mode 1440x900 --pos 0x0 --rotate normal --output eDP1 --mode 1366x768 --pos 1440x56 --rotate normal --output VIRTUAL1 --off

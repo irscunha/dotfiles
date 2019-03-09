@@ -41,12 +41,12 @@ overline-size = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Source Code Pro Semibold:size=10;1"
+font-0 = "Ubuntu Mono:size=11;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 
 modules-left = i3   
-modules-center = date2 backlight battery cpu memory filesystem pulseaudio spotify powermenu
+modules-center = date2 backlight battery cpu memory filesystem pulseaudio spotify
 modules-right = 
 
 tray-position = right
@@ -105,11 +105,8 @@ label-urgent-padding = 2
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
-
+date = " %Y-%m-%d"
 time = %H:%M
-time-alt = %H:%M:%S
 
 format-prefix = 
 format-foreground = ${colors.date_foreground}
@@ -117,34 +114,6 @@ format-background = ${colors.date_background}
 format-padding = 2
 
 label = %date% %time%
-
-[module/powermenu]
-type = custom/menu
-expand-right = true
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.powermenu_fg}
-label-close =  cancel
-label-close-foreground = ${colors.powermenu_fg}
-label-separator = |
-label-separator-foreground = ${colors.powermenu_sep}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-menu-0-2 = log off
-menu-0-2-exec = menu-open-3
-
-menu-1-0 = reboot
-menu-1-0-exec = reboot
-
-menu-2-0 = power off
-menu-2-0-exec = poweroff
-
-menu-3-0 = log off
-menu-3-0-exec = pkill -KILL -u $USER
 
 [module/backlight]
 type = internal/xbacklight
