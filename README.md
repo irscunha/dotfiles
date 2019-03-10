@@ -4,13 +4,15 @@
 * **Wallpaper**: [Mahou Shoujo Madoka Magica](https://www.zerochan.net/1757287) by [Ashelia](https://www.zerochan.net/user/Ashelia)
 * **GTK3**: [Sweet Mars](https://www.gnome-look.org/p/1253385/) 
 * **Icons**: [Tela Grey Dark](https://www.gnome-look.org/p/1279924/)
-* **Bar icons**: [Rainbow flag](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrIw5MF6cobg%2Fmaxresdefault.jpg&f=1)
+* **Bar icons colors**: [Rainbow flag](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrIw5MF6cobg%2Fmaxresdefault.jpg&f=1)
 * **Font icons**: [Font Awesome 5](https://fontawesome.com/icons?d=gallery)
 * **Terminal**: Terminator
 * **File manager**: Pcmanfm and Ranger
 * **Top Bar**: Polybar
 * **Menu**: Rofi and Morc menu
-* **Code editor**: Visual Studio Code
+* **Code editor**: Visual Studio Code (Gruvbox Dark (Hard) Theme)
+* **Open Windows**: Firefox, Feh, Visual Studio Code, Pcmanfm
+* **Screenshot program**: Flameshot
 
 ## Screenshots
 
