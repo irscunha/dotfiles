@@ -138,7 +138,8 @@ bindsym $mod+Shift+q kill
 # Start program launcher
 bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/scripts/drun.sh
-bindsym $mod+A exec --no-startup-id $HOME/.config/rofi/scripts/workspace.sh
+bindsym $mod+a exec --no-startup-id $HOME/.config/rofi/scripts/switch_workspace.sh
+bindsym $mod+x exec --no-startup-id $HOME/.config/rofi/scripts/move_workspace.sh
 bindsym $mod+0 exec --no-startup-id $HOME/.config/rofi/scripts/powermenu.sh
 bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/screenshot.sh
 
@@ -267,11 +268,12 @@ mode "resize" {
 # ---- COLORS ---- #
 
 # Theme colors
-client.focused #56737a #1e1e20 #56737a #56737a #56737a
-client.focused_inactive #56737a #1e1e20 #56737a #2c5159 #2c5159
-client.unfocused #56737a #1e1e20 #56737a #2c5159 #2c5159
-client.urgent #56737a #1e1e20 #56737a #2c5159 #2c5159
-client.placeholder #56737a #1e1e20 #56737a #2c5159 #2c5159
+# <colorclass> <border> <background> <text> <indicator> <child_border>
+client.focused          #F7A9A8 #1e1e20 #F7A9A8 #9e6c6b #9e6c6b
+client.focused_inactive #F7A9A8 #1e1e20 #F7A9A8 #9e6c6b #1e1e20
+client.unfocused        #F7A9A8 #1e1e20 #F7A9A8 #9e6c6b #1e1e20
+client.urgent           #F7A9A8 #1e1e20 #F7A9A8 #9e6c6b #1e1e20
+client.placeholder      #F7A9A8 #1e1e20 #F7A9A8 #9e6c6b #1e1e20
 
 client.background #1e1e20
 
