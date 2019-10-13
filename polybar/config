@@ -1,0 +1,53 @@
+;=====================================================
+; The system tray and other default values for bars
+; inheriting from master are enabled in master.conf
+;
+; modules.conf contains all the modules that can be
+; added to a bar (NOTE: some will require configuration)
+
+[section/base]
+include-file = /home/ingrid/.config/polybar/master.conf
+include-file = /home/ingrid/.config/polybar/modules.conf
+
+
+;=====================================================
+; i3 Bar
+
+[bar/i3-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left = ewmh i3 menu
+modules-center = clock
+modules-right = net volume
+
+
+;=====================================================
+; Bspwm Bars
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = bspwm menu
+modules-center = clock
+modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
+
+
+;=====================================================
+; Generic Bars (used as fallback for unknown WM)
+
+[bar/generic-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = workspaces menu
+modules-center = clock
+modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
+
