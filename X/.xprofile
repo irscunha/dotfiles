@@ -13,13 +13,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # restore the background
 nitrogen --restore &
 
+# restore system colorscheme using pywal
+wal -R &
+
 # keyring and polkit daemons
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 gnome-keyring-daemon --start --components=pkcs11 &
-
-# super alone simulates Alt-F1
-# ksuperkey -e 'Super_L=Alt_L|F1' &
-# ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # dpms: timeout sleep off
 xset dpms 600 900 1200
