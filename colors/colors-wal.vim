@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/ingrid/Downloads/QRscDhg.png"
+let background = "#1C2023"
+let foreground = "#dde0e7"
+let cursor     = "#dde0e7"
+
+" Colors
+let color0  = "#1C2023"
+let color1  = "#75A8CC"
+let color2  = "#9399AE"
+let color3  = "#D3B39E"
+let color4  = "#F1D4B5"
+let color5  = "#A5B2CD"
+let color6  = "#BAC5DD"
+let color7  = "#dde0e7"
+let color8  = "#9a9ca1"
+let color9  = "#75A8CC"
+let color10 = "#9399AE"
+let color11 = "#D3B39E"
+let color12 = "#F1D4B5"
+let color13 = "#A5B2CD"
+let color14 = "#BAC5DD"
+let color15 = "#dde0e7"

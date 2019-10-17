@@ -1,0 +1,21 @@
+set $wallpaper /home/ingrid/Downloads/QRscDhg.png
+
+set $background #1C2023
+set $foreground #dde0e7
+
+set $color0 #1C2023
+set $color1 #75A8CC
+set $color2 #9399AE
+set $color3 #D3B39E
+set $color4 #F1D4B5
+set $color5 #A5B2CD
+set $color6 #BAC5DD
+set $color7 #dde0e7
+set $color8 #9a9ca1
+set $color9 #75A8CC
+set $color10 #9399AE
+set $color11 #D3B39E
+set $color12 #F1D4B5
+set $color13 #A5B2CD
+set $color14 #BAC5DD
+set $color15 #dde0e7

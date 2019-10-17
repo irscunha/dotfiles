@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/ingrid/Downloads/QRscDhg.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1C2023",
+        "foreground": "#dde0e7",
+        "cursor": "#dde0e7"
+    },
+    "colors": {
+        "color0": "#1C2023",
+        "color1": "#75A8CC",
+        "color2": "#9399AE",
+        "color3": "#D3B39E",
+        "color4": "#F1D4B5",
+        "color5": "#A5B2CD",
+        "color6": "#BAC5DD",
+        "color7": "#dde0e7",
+        "color8": "#9a9ca1",
+        "color9": "#75A8CC",
+        "color10": "#9399AE",
+        "color11": "#D3B39E",
+        "color12": "#F1D4B5",
+        "color13": "#A5B2CD",
+        "color14": "#BAC5DD",
+        "color15": "#dde0e7"
+    }
+}
