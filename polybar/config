@@ -19,10 +19,9 @@ inherit = bar/master
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor =
 
-modules-left = ewmh i3 menu
-modules-center = clock
-modules-right = net volume
-
+modules-left = clock ewmh
+modules-center =
+modules-right = spotify menu battery
 
 ;=====================================================
 ; Bspwm Bars
