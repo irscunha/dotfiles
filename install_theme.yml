@@ -1,0 +1,43 @@
+- name: Script to install the configuration
+  hosts: 127.0.0.1
+  connection: local
+
+  vars_prompt:
+    - name: wallpaper
+      prompt: "Enter absolute path for wallpaper image"
+    
+    - name: background_color
+      prompt: "Enter the desired background_color in HEX (ex: #000000)"
+  
+  vars:
+    - repository_ssh: git@github.com:irscunha/dotfiles.git 
+    - tmp_folder: /tmp/
+
+  tasks:
+
+  - name: Clone this repository
+    git:
+      repo: "{{ repository_ssh }}"
+      dest: "{{ tmp_folder }}"
+      version: master
+
+  - name: Install pywal
+    pip:
+      name: pywal==3.3.0
+
+  - name: Execute Pywal
+    shell: "wal -i {{ wallpaper }} -b '{{ background_color}}'"
+
+  - name: Copy i3 configuration
+    copy:
+        dest: "~/.config/i3"
+        src: ""
+        remote_src: yes
+
+  - name: Copy polybar configuration
+
+  - name: Copy rofi configuration
+
+  - name: Copy Xresources
+
+  - name: Copy xprofile
