@@ -7,13 +7,13 @@ xsetroot -cursor_name left_ptr
 sxhkd &
 
 # panel
-polybar -c /home/ingrid/.config/polybar/config bspwm-bar &
+polybar -c /home/username/.config/polybar/config bspwm-bar &
 
 # wallpaper and colors
 wal -R &
 
 # screenlayout
-source /home/ingrid/.screenlayout/vm.sh
+source /home/username/.screenlayout/vm.sh
 
 # Set some bsp specific stuff
 bspc monitor -d I II III IV V VI VII VIII IX X

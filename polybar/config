@@ -6,8 +6,8 @@
 ; added to a bar (NOTE: some will require configuration)
 
 [section/base]
-include-file = /home/ingrid/.config/polybar/master.conf
-include-file = /home/ingrid/.config/polybar/modules.conf
+include-file = /home/username/.config/polybar/master.conf
+include-file = /home/username/.config/polybar/modules.conf
 
 
 ;=====================================================
@@ -33,11 +33,8 @@ inherit = bar/master
 monitor =
 
 modules-left   = clock ewmh
-; bspwm menu
 modules-center = 
 modules-right  = spotify menu battery
-;${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
-
 
 ;=====================================================
 ; Generic Bars (used as fallback for unknown WM)

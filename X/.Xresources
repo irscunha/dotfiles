@@ -1,4 +1,4 @@
-#include "/home/ingrid/.cache/wal/colors.Xresources"
+#include "/home/username/.cache/wal/colors.Xresources"
 
 ! URxvt
 URxvt*saveline: 15000
