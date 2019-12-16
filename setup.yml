@@ -38,15 +38,9 @@
       register: zsh_exists
 
     - name: Install oh-my-zsh
-      block:
-        
-        - shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-          args:
-            chdir: "/home/{{ username.stdout }}/"
-
-        - name: Make zsh default bash
-          shell: chsh -s $(which zsh)
-     
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        args:
+          chdir: "/home/{{ username.stdout }}/"
       when: not zsh_exists.stat.exists
 
     - name: Install pywal
