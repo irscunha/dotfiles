@@ -31,7 +31,7 @@
         chdir: "{{ tmp_folder }}yay/"
 
     - name: Install zsh
-      shell: sudo pacman -S zsh
+      shell: sudo pacman -S zsh --noconfirm
       
     - stat:
         path: "/home/{{ username.stdout }}/.oh-my-zsh/"
