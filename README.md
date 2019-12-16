@@ -19,5 +19,8 @@
   
   **Note:** `-K` parameter is for sudo password
   
+## Set screen layout with arandr
+The `bspwmrc` file contains a line for running a screen configuration on a shellscript file. It's recommended to save your arandr config on a .sh file or removing this line and setting the layout in any other way.
+  
 ### Disclaimer
 This playbook was meant for personal use and was only tested on archlabs and bspwm. The author is not responsible for any problems that can occur using thiplaybook
