@@ -15,7 +15,7 @@
   
   Or run the playbook step-by-step if you want to choose what gets modificated
   
-  ``$ ansible-playbook setup.yml -K --step`
+  `$ ansible-playbook setup.yml -K --step`
   
   **Note:** `-K` parameter is for sudo password
   
