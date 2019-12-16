@@ -17,9 +17,6 @@
         - tmp_folder: /tmp/
 
     tasks:
-        - name: Install pip
-          shell: sudo pacman -S python3-pip
-
         - name: Clone yay
           git:
             repo: https://aur.archlinux.org/yay.git
