@@ -1,30 +1,104 @@
 - name: Script to setup my configuration on Archlabs + Bspwm
-    hosts: 127.0.0.1
-    connection: local
+  hosts: 127.0.0.1
+  connection: local
 
-    vars_prompt:
-        - name: username
-          prompt: "Enter the username of this login session"
+  vars_prompt:
+    - name: wallpaper_path
+      prompt: "Enter absolute path to wallpaper image"
+      private: no
 
-        - name: wallpaper_path
-          prompt: "Enter absolute path to wallpaper image"
+    - name: background_color
+      prompt: "Enter background color"
+      private: no
 
-        - name: background_color
-          prompt: "Enter background color"
+  vars:
+    - dotfiles_repo: git@github.com:innng/dotfiles.git
+    - tmp_folder: /tmp/
 
-    vars:
-        - repository_path: git@github.com:innng/dotfiles.git
-        - tmp_folder: /tmp/
+  tasks:
+    - name: Get username
+      shell: echo "$USER"
+      register: username
 
-    tasks:
-        - name: Clone yay
-          git:
-            repo: https://aur.archlinux.org/yay.git
-            dest: "{{ tmp_folder }}"
+    - name: Update pacman
+      shell: sudo pacman -Syu
 
-        - name: Install yay
-          shell: makepkg -si
-          chdir: "{{ tmp_folder }}yay/"
+    - name: Clone yay
+      git:
+        repo: https://aur.archlinux.org/yay.git
+        dest: "{{ tmp_folder }}yay/"
 
+    - name: Install yay
+      shell: makepkg -si --noconfirm
+      args:
+        chdir: "{{ tmp_folder }}yay/"
+
+    - stat:
+        path: "/home/{{ username.stdout }}/.oh-my-zsh/"
+      register: zsh_exists
+
+    - name: Install oh-my-zsh
+      block:
         
+        - shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+          args:
+            chdir: "/home/{{ username.stdout }}/"
+
+        - name: Make zsh default bash
+          shell: chsh -s $(which zsh)
+     
+      when: not zsh_exists.stat.exists
+
+    - name: Install pywal
+      pip:
+        name: pywal
+
+    - name: Set pywal
+      shell: "wal -i \"{{ wallpaper_path }}\" -b \"{{ background_color }}\""
+
+    - name: Clone dotfiles repository
+      git:
+        repo: "{{ dotfiles_repo }}"
+        dest: "{{ tmp_folder }}dotfiles/"
+
+    - name: Copy .Xresources
+      copy:
+        src: "{{ tmp_folder}}dotfiles/X/.Xresources"
+        dest: "/home/{{ username.stdout }}/.Xresources"
+        backup: yes
+
+    - name: Change username on .Xresources
+      shell: "sed -i -e 's/username/{{ username.stdout }}/g' .Xresources"
+        args:
+          chdir: "/home/{{ username.stdout }}/"
+
+    - name: Copy .xprofile
+      copy:
+        src: "{{ tmp_folder }}dotfiles/X/.xprofile"
+        dest: "/home/{{ username.stdout }}/.xprofile"
+        backup: yes
+
+    - name: Copy bspwmrc
+      copy:
+        src: "{{ tmp_folder }}dotfiles/bspwm/bspwmrc"
+        dest: "/home/{{ username.stdout }}/.config/bspwm/bspwmrc"
+        backup: yes
+    
+    - name: Change username on bspwmrc
+      shell: "sed -i -e 's/username/{{ username.stdout }}/g' bspwmrc"
+      args:
+        chdir: "/home/{{ username.stdout }}/.config/bspwm/"
+
+    - name: Copy sxhkdrc
+      copy:
+        src: "{{ tmp_folder }}dotfiles/sxhkd/sxhkdrc"
+        dest: "/home/{{ username.stdout }}/.config/sxhkd/sxhkdrc"
+        backup: yes
+
+    - name: Copy polybar files
+
+
+    - name: Copy rofi config
+
+    - name: Copy .vimrc
 
