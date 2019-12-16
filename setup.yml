@@ -30,6 +30,9 @@
       args:
         chdir: "{{ tmp_folder }}yay/"
 
+    - name: Install zsh
+      shell: sudo pacman -S zsh
+      
     - stat:
         path: "/home/{{ username.stdout }}/.oh-my-zsh/"
       register: zsh_exists
