@@ -21,7 +21,7 @@
       register: username
 
     - name: Update pacman
-      shell: sudo pacman -Syu
+      shell: sudo pacman -Syu --noconfirm
 
     - name: Clone yay
       git:
@@ -69,8 +69,8 @@
 
     - name: Change username on .Xresources
       shell: "sed -i -e 's/username/{{ username.stdout }}/g' .Xresources"
-        args:
-          chdir: "/home/{{ username.stdout }}/"
+      args:
+        chdir: "/home/{{ username.stdout }}/"
 
     - name: Copy .xprofile
       copy:
@@ -80,8 +80,8 @@
 
     - name: Copy bspwmrc
       copy:
-        src: "{{ tmp_folder }}dotfiles/bspwm/bspwmrc"
-        dest: "/home/{{ username.stdout }}/.config/bspwm/bspwmrc"
+        src: "{{ tmp_folder }}dotfiles/bspwm/"
+        dest: "/home/{{ username.stdout }}/.config/bspwm/"
         backup: yes
     
     - name: Change username on bspwmrc
@@ -91,14 +91,35 @@
 
     - name: Copy sxhkdrc
       copy:
-        src: "{{ tmp_folder }}dotfiles/sxhkd/sxhkdrc"
-        dest: "/home/{{ username.stdout }}/.config/sxhkd/sxhkdrc"
+        src: "{{ tmp_folder }}dotfiles/sxhkd/"
+        dest: "/home/{{ username.stdout }}/.config/sxhkd/"
         backup: yes
 
     - name: Copy polybar files
+      copy:
+        src: "{{ tmp_folder }}dotfiles/polybar/"
+        dest: "/home/{{ username.stdout }}/.config/polybar/"
+        backup: yes
 
+    - name: Change username on polybar config
+      shell: "sed -i -e 's/username/{{ username.stdout }}/g' config"
+      args:
+        chdir: "/home/{{ username.stdout }}/.config/polybar/"
 
     - name: Copy rofi config
+      copy:
+        src: "{{ tmp_folder }}dotfiles/rofi/"
+        dest: "/home/{{ username.stdout }}/.config/rofi"
+        backup: yes
+
+    - name: Change username on rofi config
+      shell: "sed -i -e 's/username/{{ username.stdout }}/g' config.rasi"
+      args:
+        chdir: "/home/{{ username.stdout }}/.config/rofi/"
 
     - name: Copy .vimrc
+      copy:
+        src: "{{ tmp_folder }}dotfiles/.vimrc"
+        dest: "/home/{{ username.stdout }}/.vimrc"
+        backup: yes
 
