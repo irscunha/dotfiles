@@ -12,7 +12,7 @@
       private: no
 
   vars:
-    - dotfiles_repo: git@github.com:innng/dotfiles.git
+    - dotfiles_repo: https://github.com/innng/dotfiles.git 
     - tmp_folder: /tmp/
 
   tasks:
@@ -46,6 +46,7 @@
     - name: Install pywal
       pip:
         name: pywal
+      become: True
 
     - name: Set pywal
       shell: "wal -i \"{{ wallpaper_path }}\" -b \"{{ background_color }}\""
@@ -62,9 +63,10 @@
         backup: yes
 
     - name: Change username on .Xresources
-      shell: "sed -i -e 's/username/{{ username.stdout }}/g' .Xresources"
-      args:
-        chdir: "/home/{{ username.stdout }}/"
+      replace:
+        path: "/home/{{ username.stdout }}/.Xresources"
+        regexp: 'username'
+        replace: '{{ username.stdout }}'
 
     - name: Copy .xprofile
       copy:
@@ -79,9 +81,10 @@
         backup: yes
     
     - name: Change username on bspwmrc
-      shell: "sed -i -e 's/username/{{ username.stdout }}/g' bspwmrc"
-      args:
-        chdir: "/home/{{ username.stdout }}/.config/bspwm/"
+      replace:
+        path: "/home/{{ username.stdout }}/.config/bspwm/bspwmrc"
+        regexp: 'username'
+        replace: '{{ username.stdout }}'
 
     - name: Copy sxhkdrc
       copy:
@@ -96,10 +99,11 @@
         backup: yes
 
     - name: Change username on polybar config
-      shell: "sed -i -e 's/username/{{ username.stdout }}/g' config"
-      args:
-        chdir: "/home/{{ username.stdout }}/.config/polybar/"
-
+      replace:
+        path: "/home/{{ username.stdout }}/.config/polybar/config"
+        regexp: 'username'
+        replace: '{{ username.stdout }}'
+    
     - name: Copy rofi config
       copy:
         src: "{{ tmp_folder }}dotfiles/rofi/"
@@ -107,9 +111,10 @@
         backup: yes
 
     - name: Change username on rofi config
-      shell: "sed -i -e 's/username/{{ username.stdout }}/g' config.rasi"
-      args:
-        chdir: "/home/{{ username.stdout }}/.config/rofi/"
+      replace:
+        path: "/home/{{ username.stdout }}/.config/rofi/config.rasi"
+        regexp: 'username'
+        replace: '{{ username.stdout }}'
 
     - name: Copy .vimrc
       copy:
