@@ -139,4 +139,7 @@
 
     - name: Install unzip
       shell: yay -S unzip --noconfirm --needed
+     
+    - name: Install python-dbus for polybar spotify status
+      shell: yay -S python-dbus --noconfirm --needed
  
