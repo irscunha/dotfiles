@@ -1,0 +1,14 @@
+-name: Script to setup my configuration on Archlabs + Bspwm
+hosts: 127.0.0.1
+connection: local
+
+vars_prompt:
+    - name: wallpaper_path
+      prompt: "Enter absolute path to wallpaper image"
+
+    - name: username
+      prompt: "Enter the username of this login session"
+
+    - name: background_color
+      prompt: "Enter background color"
+
