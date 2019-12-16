@@ -4,6 +4,8 @@
   * [Wallpaper](https://imgur.com/gallery/rM2fRya)
   * Background color: #11141B
   
+##   
+
 ## Ansible playbook
 
 ### What is?
@@ -32,6 +34,10 @@ The `bspwmrc` file contains a line for running a screen configuration on a shell
   Install ansible
   
   `$ pip install ansible`
+  
+  Download playbook
+  
+  `$ curl https://raw.githubusercontent.com/innng/dotfiles/master/setup.yml >> setup.yml`
   
   Run playbook
   
