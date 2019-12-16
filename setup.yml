@@ -123,3 +123,17 @@
         dest: "/home/{{ username.stdout }}/.vimrc"
         backup: yes
 
+    - name: Install VisualStudioCode
+      shell: yay -S code --noconfirm
+
+    - name: Install spotify
+      shell: yay -S spotify --noconfirm
+
+    - name: Install flameshot
+      shell: yay -S flameshot --noconfirm
+
+    - name: Install zip
+      shell: yay -S zip --noconfirm
+
+    - name: Install unzip
+      shell: yay -S unzip --noconfirm
