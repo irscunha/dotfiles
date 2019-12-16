@@ -20,9 +20,6 @@
       shell: echo "$USER"
       register: username
 
-    - name: Update pacman
-      shell: sudo pacman -Syu --noconfirm
-
     - name: Clone yay
       git:
         repo: https://aur.archlinux.org/yay.git
