@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# sourced at boot by ~/.xinitrc and most display managers
+
+XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME
+
+[ "$PATH" == *"$HOME/bin"* ] || PATH="$HOME/bin:$PATH"
+
+# compton -b &
+nitrogen --restore &
+volumeicon &
+nm-applet &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+gnome-keyring-daemon --start --components=pkcs11 &
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+xset dpms 600 900 1200
+xset r rate 350 60
