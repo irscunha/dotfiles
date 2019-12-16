@@ -123,16 +123,20 @@
         backup: yes
 
     - name: Install VisualStudioCode
-      shell: yay -S code --noconfirm
+      shell: yay -S code --noconfirm --needed
 
     - name: Install spotify
-      shell: yay -S spotify --noconfirm
+      shell: yay -S spotify --noconfirm --needed
 
     - name: Install flameshot
-      shell: yay -S flameshot --noconfirm
+      shell: yay -S flameshot --noconfirm --needed
 
-    - name: Install zip
-      shell: yay -S zip --noconfirm
+    - name: Install telegram desktop
+      shell: yay -S telegram-desktop --noconfirm --needed
+
+    - name: Install zip 
+      shell: yay -S zip --noconfirm --needed
 
     - name: Install unzip
-      shell: yay -S unzip --noconfirm
+      shell: yay -S unzip --noconfirm --needed
+ 
