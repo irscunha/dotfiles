@@ -21,6 +21,7 @@ Ansible is a infrastructure-as-code tool that's used to set and config remote ho
   * Install VisualStudioCode (code editor)
   * Install Spotify (music player)
   * Install Flameshot (screenshot tool)
+  * Install telegram-desktop (messager tool)
   * Install zip and unzip (.zip compress and decompress tools)
     
 ### Set screen layout with arandr
