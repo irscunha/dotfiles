@@ -39,8 +39,8 @@
 
     - name: Install oh-my-zsh
       shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-        args:
-          chdir: "/home/{{ username.stdout }}/"
+      args:
+        chdir: "/home/{{ username.stdout }}/"
       when: not zsh_exists.stat.exists
 
     - name: Install pywal
