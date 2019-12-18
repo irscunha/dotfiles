@@ -51,6 +51,9 @@
     - name: Set pywal
       shell: "wal -i \"{{ wallpaper_path }}\" -b \"{{ background_color }}\""
 
+    - name: Install polybar
+      shell: yay -S polybar --noconfirm --needed
+
     - name: Clone dotfiles repository
       git:
         repo: "{{ dotfiles_repo }}"
