@@ -1,4 +1,4 @@
-#include "/home/username/.cache/wal/colors.Xresources"
+#include "/home/ingrid/.cache/wal/colors.Xresources"
 
 ! URxvt
 URxvt*saveline: 15000
@@ -8,8 +8,10 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
-URxvt*letterSpace: -1
-URxvt.font: xft:monospace:size=11
+URxvt*letterSpace: 1 
+!URxvt.font: xft:monospace:size=11
+URxvt.font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true 
+URxvt.boldfont: xft:Bitstream Vera Sans Mono:Bold:size=16:antialias=true
 URxvt.perl-ext-common: default,matcher,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
@@ -26,4 +28,5 @@ URxvt.tabbed.tabbar-bg: 16
 URxvt.tabbed.tab-fg: 15
 URxvt.tabbed.tab-bg: 4
 URxvt*buffered: false
+
 

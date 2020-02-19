@@ -2,28 +2,32 @@
 super + F1
     exo-open --launch WebBrowser
 
-# terminal emulator
-super + Return
-    exo-open --launch TerminalEmulator
-
 # file manager
 super + F2
     exo-open --launch FileManager
+
+# terminal emulator
+super + Return
+    exo-open --launch TerminalEmulator
 
 # program launcher
 super + d
     rofi_run -r
 
-# make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files
 super + shift + r
     pkill -USR1 -x sxhkd
 
+# make bspwm reload its configuration files
+super + r
+    bspc wm -r
+    
 # quit bspwm normally
 super + x
     rofi_run -l
 
 # close and kill
-super + {_,shift + }q
+super + {shift + ,_}q
     bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -109,15 +113,12 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {Left,Down,Top,Right}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0} 
+super + alt + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20, left 20 0} 
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-super + alt + shift + {Right,Top,Bottom,Left}
-    bspc node -z {right -20 0,top 0 20, bottom 0 -20,left 20 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
