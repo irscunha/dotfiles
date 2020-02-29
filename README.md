@@ -6,6 +6,12 @@
   
 ##   
 
+## Screenshots 
+![](https://i.imgur.com/UBr8Gz3.png)
+![](https://i.imgur.com/JBOkRKk.png)
+![](https://i.imgur.com/1zF6Jop.png)
+![](https://i.imgur.com/txQxxzR.png)
+
 ## Ansible playbook
 
 ### What is?
@@ -23,9 +29,6 @@ Ansible is a infrastructure-as-code tool that's used to set and config remote ho
   * Install Flameshot (screenshot tool)
   * Install telegram-desktop (messager tool)
   * Install zip and unzip (.zip compress and decompress tools)
-    
-### Set screen layout with arandr
-The `bspwmrc` file contains a line for running a screen configuration on a shellscript file. It's recommended to save your arandr config under the name `screenlayout.sh` or remove the line and set the layout in any other way.
 
 ### Requirements asked by the playbook
   * The absolute path of wallpaper image (for pywal to use)
