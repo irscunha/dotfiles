@@ -27,7 +27,7 @@ super + x
     rofi_run -l
 
 # close and kill
-super + {shift + ,_}q
+super + {_, shift + }q
     bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
