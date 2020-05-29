@@ -34,7 +34,7 @@
         chdir: "{{ tmp_folder }}yay/"
 
     - name: Install zsh
-      shell: yay -S zsh --noconfirm
+      shell: yay -S zsh --noconfirm --needed
       
     - stat:
         path: "/home/{{ username.stdout }}/.oh-my-zsh/"
