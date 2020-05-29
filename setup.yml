@@ -62,6 +62,12 @@
         repo: "{{ dotfiles_repo }}"
         dest: "{{ tmp_folder }}dotfiles/"
 
+    - name: Copy xorg configurations
+      copy:
+        src: "{{ tmp_folder }}/dotfiles/X11/"
+        dest: "/etc/X11/xorg.conf.d/"
+      become: True
+      
     - name: Copy .Xresources
       copy:
         src: "{{ tmp_folder}}dotfiles/X/.Xresources"
