@@ -20,6 +20,9 @@
       shell: echo "$USER"
       register: username
 
+    - name: Install pip
+      shell: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py
+
     - name: Clone yay
       git:
         repo: https://aur.archlinux.org/yay.git
