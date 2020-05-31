@@ -3,7 +3,7 @@ configuration {
     width: 75;
     lines: 18;
     columns: 3;
-    theme: "/home/ingrid/.cache/wal/colors-rofi-dark.rasi";
+    theme: "/home/ing/.cache/wal/colors-rofi-dark.rasi";
     font: "Ubuntu Mono 11";
     location: 0;
     show-icons: true;

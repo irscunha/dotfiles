@@ -2,15 +2,15 @@
 
 # sourced at boot by ~/.xinitrc and most display managers
 
-XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CONFIG_HOME
+export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="/usr/local/bin:$HOME/.local/bin:$PATH"
 
-[ "$PATH" == *"$HOME/bin"* ] || PATH="$HOME/bin:$PATH"
-
-# compton -b &
-nitrogen --restore &
-volumeicon &
+wal --vte -R &
+picom -b &
 nm-applet &
+volumeicon &
+nitrogen --restore &
+xfce4-power-manager &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 gnome-keyring-daemon --start --components=pkcs11 &
 ksuperkey -e 'Super_L=Alt_L|F1' &
