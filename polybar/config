@@ -6,8 +6,8 @@
 ; added to a bar (NOTE: some will require configuration)
 
 [section/base]
-include-file = /home/ing/.config/polybar/master.conf
-include-file = /home/ing/.config/polybar/modules.conf
+include-file = $HOME/.config/polybar/master.conf
+include-file = $HOME/.config/polybar/modules.conf
 
 
 ;=====================================================

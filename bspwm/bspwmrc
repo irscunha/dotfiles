@@ -8,7 +8,7 @@ sxhkd &
 
 # panel
 # tint2 &
-polybar -c /home/ing/.config/polybar/config bspwm-bar &
+polybar -c $HOME/.config/polybar/config bspwm-bar &
 
 # enable numpad
 numlockx on &
