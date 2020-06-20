@@ -6,6 +6,9 @@ super + F1
 super + F2
     exo-open --launch FileManager
 
+super + F3
+    spotify
+
 # terminal emulator
 super + Return
     exo-open --launch TerminalEmulator
@@ -124,14 +127,29 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
+
 # volume control keys
 XF86AudioMute
     pamixer -t
 XF86AudioRaiseVolume
-    pamixer -i 2
+    pamixer -i 2; notify-send 'Current volume:' $(pamixer --get-volume)
 XF86AudioLowerVolume
-    pamixer -d 2
+    pamixer -d 2; notify-send 'Current volume:' $(pamixer --get-volume)
 XF86MonBrightnessUp
-    xbacklight +10
+    xbacklight +10; notify-send 'Current brightness:' $(xbacklight)
 XF86MonBrightnessDown
-    xbacklight -10
+    xbacklight -10; notify-send 'Current brightness:' $(xbacklight)
+
+# screenshot keys
+Print
+    flameshot gui
+super + F4
+    flameshot full -c
+
+# media keys (spotify focused)
+super + F5
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+super + F6
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+super + F7
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
