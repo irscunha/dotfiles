@@ -139,6 +139,8 @@ XF86MonBrightnessUp
     xbacklight +10; notify-send 'Current brightness:' $(xbacklight)
 XF86MonBrightnessDown
     xbacklight -10; notify-send 'Current brightness:' $(xbacklight)
+XF86AudioMicMute
+    pactl set-source-mute 1 toggle
 
 # screenshot keys
 Print
