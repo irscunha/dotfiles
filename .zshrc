@@ -207,9 +207,6 @@ compinit -u -d "$compfile"
 # set aliases
 source $HOME/.aliases
 
-# set $PATH
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # set pywal colorscheme
 (cat ~/.cache/wal/sequences &)
 
