@@ -9,8 +9,8 @@ sxhkd &
 # panel
 polybar -c $HOME/.config/polybar/config bspwm-bar &
 
-# enable numpad
-numlockx on &
+# enable mictray
+mictray &
 
 # wallpaper and colors
 . "${HOME}/.cache/wal/colors.sh"
