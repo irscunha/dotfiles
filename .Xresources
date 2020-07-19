@@ -1,1 +1,1 @@
-#include "$HOME/.cache/wal/colors.Xresources"
+#include "./colors.Xresources"
