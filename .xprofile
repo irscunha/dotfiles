@@ -3,7 +3,7 @@
 # sourced at boot by ~/.xinitrc and most display managers
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 
 picom -b &
 nm-applet &

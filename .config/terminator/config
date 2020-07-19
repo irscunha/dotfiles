@@ -8,6 +8,7 @@
     show_titlebar = False
     scrollbar_position = hidden
     use_system_font = False
+    copy_on_selection = True
   [[b&w]]
     show_titlebar = False
     scrollbar_position = disabled

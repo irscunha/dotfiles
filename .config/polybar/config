@@ -29,8 +29,8 @@ modules-right  =
 [bar/right-bar]
 monitor = eDP1
 
-modules-left   = settings-app 
-modules-center = placeholder
+modules-left   = settings-app placeholder 
+modules-center = 
 modules-right  = 
 
 
