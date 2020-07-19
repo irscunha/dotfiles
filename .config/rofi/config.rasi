@@ -1,14 +1,12 @@
 configuration {
-    modi: "window,run,drun";
+    font: "Ubuntu Mono Nerd Font 13";    
+    columns: 2;
     width: 75;
-    lines: 18;
-    columns: 3;
-    theme: "~/.cache/wal/colors-rofi-dark.rasi";
-    font: "Ubuntu Mono 11";
-    location: 0;
     show-icons: true;
-    sort: true;
-    disable-history: false;
+    theme: "~/.cache/wal/colors-rofi-dark.rasi";
+    terminal: "terminator";
+    sidebar-mode: true;
     eh: 2;
+    separator-style: "none";
     hide-scrollbar: true;
 }

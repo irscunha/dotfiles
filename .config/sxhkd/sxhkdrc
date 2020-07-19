@@ -15,7 +15,7 @@ super + Return
 
 # program launcher
 super + d
-    rofi_run -d
+    rofi -show drun
 
 # make sxhkd reload its configuration files
 super + shift + r
@@ -27,7 +27,7 @@ super + r
     
 # quit bspwm normally
 super + x
-    rofi_run -l
+    $HOME/.config/rofi/scripts/powermenu.sh
 
 # close and kill
 super + {_, shift + }q

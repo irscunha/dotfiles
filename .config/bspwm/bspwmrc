@@ -6,18 +6,21 @@ xsetroot -cursor_name left_ptr
 # key bindings
 sxhkd &
 
-# panel
-polybar -c $HOME/.config/polybar/config bspwm-bar &
-
-# enable mictray
+# enable mictray and blueman-applet
 mictray &
+blueman-applet &
+
+# panel
+polybar -c $HOME/.config/polybar/config left-bar &
+# polybar -c $HOME/.config/polybar/config middle-bar &
+polybar -c $HOME/.config/polybar/config right-bar &
 
 # wallpaper and colors
 . "${HOME}/.cache/wal/colors.sh"
 (wal -r &)
 
 # Set some bsp specific stuff
-bspc monitor -d I II III IV V 
+bspc monitor -d 1 2 3 4 5
 
 bspc config window_gap 12
 bspc config border_width 2

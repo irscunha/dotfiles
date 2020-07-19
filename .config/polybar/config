@@ -12,26 +12,25 @@ include-file = $HOME/.config/polybar/modules.conf
 ;=====================================================
 ; Bspwm Bars
 
-[bar/bspwm-bar]
-inherit = bar/master
+[bar/left-bar]
+monitor = eDP1
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+modules-left   = 
+modules-center = clock bspwm 
+modules-right  = 
 
-modules-left   = clock ewmh 
-modules-center = 
-modules-right  = spotify menu battery
+[bar/middle-bar]
+monitor = eDP1
 
-;=====================================================
-; Generic Bars (used as fallback for unknown WM)
+modules-left   = 
+modules-center = placeholder 
+modules-right  = 
 
-[bar/generic-bar]
-inherit = bar/master
+[bar/right-bar]
+monitor = eDP1
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+modules-left   = settings-app 
+modules-center = placeholder
+modules-right  = 
 
-modules-left   = workspaces menu
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
 

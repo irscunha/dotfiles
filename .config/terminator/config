@@ -4,8 +4,10 @@
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
+    font = UbuntuMono Nerd Font 11
     show_titlebar = False
-    scrollbar_position = disabled
+    scrollbar_position = hidden
+    use_system_font = False
   [[b&w]]
     show_titlebar = False
     scrollbar_position = disabled
