@@ -150,8 +150,8 @@ super + F4
 
 # media keys (spotify focused)
 super + F5
-    playerctl play-pause
+    playerctl -a  play-pause
 super + F6
-    playerctl next
+    playerctl -a next
 super + F7
-    playerctl previous
+    playerctl -a previous
