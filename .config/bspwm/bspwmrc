@@ -11,9 +11,7 @@ mictray &
 blueman-applet &
 
 # panel
-polybar -c $HOME/.config/polybar/config left-bar &
-# polybar -c $HOME/.config/polybar/config middle-bar &
-polybar -c $HOME/.config/polybar/config right-bar &
+$HOME/.config/polybar/polybar_start.sh
 
 # wallpaper and colors
 . "${HOME}/.cache/wal/colors.sh"
