@@ -10,3 +10,6 @@
 [Dotfiles page on ArchWiki](https://wiki.archlinux.org/index.php/Dotfiles)
 
 [Mute button not working](https://wiki.archlinux.org/index.php/ThinkPad_mute_button)
+
+### Polybar modules
+[Spotify status](https://github.com/Jvanrhijn/polybar-spotify)
