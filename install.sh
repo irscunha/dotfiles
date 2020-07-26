@@ -39,9 +39,6 @@ cd fonts
 
 ########## CONFIGURATION ##########
 
-# apply wpgtk theme
-wpgtk -r
-
 # setup dotifles config with git bare
 cd $HOME
 git clone --bare $DOTFILES_REPO $GIT_DIR
@@ -54,3 +51,9 @@ dotfiles pull
 # set vim as core editor for git
 git config --global core.editor "vim"
 
+# apply wpgtk theme
+wpgtk -r
+
+# make available GTK theme using wpgtk
+mkdir -p $HOME/.themes
+ln -s $HOME/.local/share/themes/FlatColor $HOME/.themes
