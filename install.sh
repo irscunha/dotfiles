@@ -28,7 +28,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl -fsSL https://starship.rs/install.sh | zsh
 
 # install apps
-yay -S polybar python-dbus rofi code spotify flameshot telegram-desktop --noconfirm --needed
+yay -S polybar python-dbus rofi code spotify flameshot telegram-desktop playerctl wpgtk-git lxappearance --noconfirm --needed
 
 
 # install powerline fonts
@@ -37,14 +37,10 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 
-# install pywal
-cd /tmp
-pip install pywal
-
 ########## CONFIGURATION ##########
 
-# apply pywal theme
-wal -i $WALLPAPER_PATH
+# apply wpgtk theme
+wpgtk -r
 
 # setup dotifles config with git bare
 cd $HOME

@@ -207,8 +207,8 @@ compinit -u -d "$compfile"
 # set aliases
 source $HOME/.aliases
 
-# set pywal colorscheme
-(cat ~/.cache/wal/sequences &)
+# set wpgtk colorscheme
+(cat $HOME/.config/wpg/sequences &)
 
 # set oh-my-zsh config for aliases
 export ZSH=$HOME/.oh-my-zsh
