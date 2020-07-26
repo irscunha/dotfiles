@@ -23,13 +23,13 @@ modules-right  =
 monitor = eDP1
 
 modules-left   = 
-modules-center = placeholder 
+modules-center = jgmenu settings-app spotify
 modules-right  = 
 
 [bar/right-bar]
 monitor = eDP1
 
-modules-left   = settings-app placeholder 
+modules-left   = placeholder 
 modules-center = 
 modules-right  = 
 
