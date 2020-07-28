@@ -17,9 +17,16 @@ $HOME/.config/polybar/polybar_start.sh
 . "${HOME}/.cache/wal/colors.sh"
 (wal -r &)
 
-# Set some bsp specific stuff
-bspc monitor -d 1 2 3 4 5
+# set bsp monitor assignment
+bspc monitor eDP1 -d 1 2 3 4 5
 
+# set dual monitor layout
+if [ "$(bspc query -M | wc -l)" = 2 ]; then
+    $HOME/.screenlayout/dual_setup.sh
+    bspc monitor HDMI2 -d 6 7 8 9 0
+fi
+
+# set some bsp specific stuff
 bspc config window_gap 12
 bspc config border_width 2
 

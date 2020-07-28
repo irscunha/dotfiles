@@ -33,4 +33,9 @@ modules-left   = placeholder
 modules-center = 
 modules-right  = 
 
+[bar/support-bar]
+monitor = HDMI2
 
+modules-left   =  
+modules-center = clock bspwm
+modules-right  = 
