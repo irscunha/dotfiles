@@ -1,8 +1,7 @@
 # Dotfiles!
 
-## How to use
-
-## Considerations
+## Screenshots
+![](./img/clean.png)
 
 ## Useful links
 [Manage dotfiles with git bare](https://news.ycombinator.com/item?id=11070797)
@@ -11,5 +10,3 @@
 
 [Mute button not working](https://wiki.archlinux.org/index.php/ThinkPad_mute_button)
 
-### Polybar modules
-[Spotify status](https://github.com/Jvanrhijn/polybar-spotify)
