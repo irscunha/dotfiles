@@ -1,0 +1,12 @@
+configuration {
+    font: "Fira Code Retina Nerd Font 12";    
+    columns: 2;
+    width: 75;
+    show-icons: true;
+    theme: "~/.cache/wal/colors-rofi-dark.rasi";
+    terminal: "xfce4-terminal";
+    sidebar-mode: true;
+    eh: 2;
+    separator-style: "none";
+    hide-scrollbar: true;
+}
