@@ -12,4 +12,7 @@
 
 ## Credits
 [GTK Theme and Icons](https://github.com/windozz/dotfiles)
+
 [Color scripts](https://github.com/FlorianHeydrich/ColorScripts)
+
+[Rofi configuration](https://github.com/elenapan/dotfiles)
