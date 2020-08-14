@@ -1,1 +1,7 @@
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dstatus="dots status"
+alias dadd="dots add"
+alias dcommit="dots commit -m"
+alias dammend="dots commit --amend"
+alias dpush="dots push"
+alias dforce="dos push --force"
