@@ -17,7 +17,7 @@
 * **Bar**: Xfce-panel;
 * **Editor**: VsCode with [Wal Theme](https://github.com/dlasagno/vscode-wal-theme) + Vim wih [Wal Theme](https://github.com/dylanaraps/wal.vim) + Emacs;
 * **File Manager**: Thunar;
-* **Launcher**: Rofi with custom theme based on [this](https://github.com/elenapan/dotfiles);
+* **Launcher and menus**: Rofi with custom theme based on [this](https://github.com/adi1090x/rofi);
 * **Browser**: Firefox;
 * **Chat**: Telegram with [Wal theme](https://github.com/agnipau/telegram-palette-gen);
 * **GTK theme and icons**: [Euphoria](https://github.com/windozz/dotfiles);
@@ -29,4 +29,3 @@
 [Dotfiles page on ArchWiki](https://wiki.archlinux.org/index.php/Dotfiles)
 
 [Mute button not working](https://wiki.archlinux.org/index.php/ThinkPad_mute_button)
-

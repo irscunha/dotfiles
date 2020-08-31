@@ -15,7 +15,11 @@ super + Return
 
 # program launcher
 super + d
-    rofi -show drun
+    $HOME/.config/rofi/launchers/launcher.sh
+
+# spotify control panel
+super + a
+    $HOME/.config/rofi/scripts/spotify.sh
 
 # make sxhkd reload its configuration files
 super + shift + r
@@ -24,11 +28,10 @@ super + shift + r
 # make bspwm reload its configuration files
 super + r
     bspc wm -r
-    
+
 # quit bspwm normally
 super + x
-    xfce4-session-logout
-#     $HOME/.config/rofi/scripts/powermenu.sh
+    $HOME/.config/rofi/scripts/powermenu.sh
 
 # close and kill
 super + {_, shift + }q
@@ -118,7 +121,7 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {Left,Down,Up,Right}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20, right 20 0} 
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20, right 20 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {Left,Down,Up,Right}
@@ -141,4 +144,3 @@ super + F6
     dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 super + F7
     dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-
