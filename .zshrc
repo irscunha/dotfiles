@@ -17,3 +17,5 @@ eval "$(starship init zsh)"
 
 # set wpgtk colorscheme
 (cat $HOME/.config/wpg/sequences &)
+
+eval "$(direnv hook zsh)"

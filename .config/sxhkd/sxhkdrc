@@ -11,7 +11,7 @@ super + F3
 
 # terminal emulator
 super + Return
-    exo-open --launch TerminalEmulator
+    terminator
 
 # program launcher
 super + d

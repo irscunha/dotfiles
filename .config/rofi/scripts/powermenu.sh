@@ -35,7 +35,7 @@ case $chosen in
         systemctl suspend
         ;;
     $logout)
-        openbox --exit
+        xfce4-session-logout
         ;;
 esac
 

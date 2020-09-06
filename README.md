@@ -28,4 +28,6 @@
 
 [Dotfiles page on ArchWiki](https://wiki.archlinux.org/index.php/Dotfiles)
 
+[XFCE + BSPWM setup](https://bgdawes.github.io/bspwm-xfce-dotfiles/)
+
 [Mute button not working](https://wiki.archlinux.org/index.php/ThinkPad_mute_button)
