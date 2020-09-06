@@ -2,11 +2,6 @@
 <img width="600" src="./img/header.png"/>
 </div>
 
-## Screenshots
-![](./img/clean.png)
-![](./img/busy1.png)
-![](./img/busy2.png)
-![](./img/busy3.png)
 
 ## Details
 * **WM**: Bspwm;
@@ -25,6 +20,14 @@
 * **File Manager**: Thunar;
 * **Browser**: Firefox;
 * **Music player**: Spotify.
+
+
+## Screenshots
+![](./img/clean.png)
+![](./img/busy1.png)
+![](./img/busy2.png)
+![](./img/busy3.png)
+
 
 ## Useful links
 [Manage dotfiles with git bare](https://news.ycombinator.com/item?id=11070797)
