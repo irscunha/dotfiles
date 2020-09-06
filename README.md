@@ -4,6 +4,9 @@
 
 ## Screenshots
 ![](./img/clean.png)
+![](./img/busy1.png)
+![](./img/busy2.png)
+![](./img/busy3.png)
 
 ## Details
 * **WM**: Bspwm;
